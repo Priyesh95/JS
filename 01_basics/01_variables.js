@@ -81,3 +81,26 @@ for (let i = 0; i < 3; i++) {
     Each callback inside setTimeout() gets a separate copy of i for each iteration.
     When setTimeout() executes after 1 second, each callback has its own i value preserved from the corresponding iteration.
 */
+
+// Example 1: Primitive Values (Cannot Be Changed)
+// For primitive values (e.g., numbers, strings, booleans), the value assigned to a const variable cannot be changed.
+
+const x = 10;
+x = 20;  // ❌ Error: Assignment to constant variable.
+
+// Example 2: Objects and Arrays (Contents Can Be Changed)
+// For objects and arrays, the reference is constant, but the contents (properties or elements) can be modified.
+
+// Objects:
+const obj = { name: "Alice" };
+obj.name = "Bob";  // ✅ Allowed: Modifying a property.
+
+obj = { age: 30 }; // ❌ Error: Cannot reassign a new object to `obj`.
+
+// Arrays:
+
+const arr = [1, 2, 3];
+arr.push(4);       // ✅ Allowed: Modifying the contents of the array.
+console.log(arr);  // Output: [1, 2, 3, 4]
+
+arr = [5, 6];      // ❌ Error: Cannot reassign a new array to `arr`.

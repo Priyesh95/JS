@@ -30,10 +30,10 @@ console.log("A ", myArr);
 
 const myn1 = myArr.slice(1, 3)
 
-console.log(myn1); // slice will not make any cahnge to main array and will return [1,2]
+console.log(myn1); // slice will not make any change to main array and will return [1,2]. Basically slice will return remining elements from array.
 console.log("B ", myArr);
 
 
-const myn2 = myArr.splice(1, 3) // Splice will remove 1,2,3 from main array and return [1,2,3]
+const myn2 = myArr.splice(1, 3) // Splice will remove 1,2,3 from main array and return [1,2,3]. Splice returns whatever elements are removed from maint array.
 console.log("C ", myArr);
 console.log(myn2);
