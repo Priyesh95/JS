@@ -18,7 +18,10 @@ function check(){
 check()
 
 
-// this cannot be accessed inside function line 13
+// this cannot be accessed inside arrow function line 13
+// The key reason arrow functions cannot use this like regular functions is that they do not have their own this context. 
+// Instead, they inherit this from the surrounding lexical scope (the function or object they are defined inside).
+
 const check2 = () => {
     let userName = "test";
     console.log(this.userName);
