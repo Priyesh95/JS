@@ -11,7 +11,7 @@ createUser.prototype.getScore = function(){
     return this.score;
 }
 
-const userOne = new createUser("Priyesh",100); // IF new is not used then getScore will not be added to object.
+const userOne = new createUser("Priyesh",100); // IF new is not used then getScore will not be added to createUser.
 
 console.log(userOne.getScore()); 
 
