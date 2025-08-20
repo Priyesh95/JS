@@ -1,7 +1,7 @@
 const marvel_heros = ["ironman", "hulk", "thor"];
 const dc_heros = ["batman", "superman", "flash"];
 
-// marvel_heros.push(dc_heros);
+marvel_heros.push(dc_heros);
 
 console.log(marvel_heros)
 
@@ -15,6 +15,6 @@ const all_heroes_spread = [...marvel_heros, ...dc_heros] // spread operator mean
 
 console.log(all_heroes_spread)
 
-
+console.log(Array.isArray(all_heroes_spread));
 console.log(Array.isArray("Priyesh"));
 console.log(Array.from("Priyesh")); // ['P', 'r', 'i','y', 'e', 's','h']
