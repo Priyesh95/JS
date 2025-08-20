@@ -53,7 +53,7 @@ console.log(emailTwo) // "newTest@gmail.com"
 
 
 let userOne = {
-  email : "test@gmail.com"
+  email : "test@gmail.com",
   id : "123"
 }
 
@@ -62,9 +62,11 @@ let userTwo = userOne;
 console.log(userOne.email) // "test@gmail.com"
 console.log(userTwo.email) // "test@gmail.com"
 
-usertwo.email = "newTest@gmail.com"
+userTwo.email = "newTest@gmail.com" 
 
+// since non primitive types are stored in heap memory userOne and userTwo both point to same object 
+// so if one is changed other is also changed
 
-console.log(userOne.email) // "test@gmail.com"
+console.log(userOne.email) // "newTest@gmail.com"
 console.log(userTwo.email) // "newTest@gmail.com"
 
