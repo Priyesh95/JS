@@ -21,36 +21,36 @@
     // init();
     
     // This is lexical scopinp that username is available for each child functions
-    // function outer(){
-    //     let username = "hitesh"
-    //     console.log("OUTER", secret);
-    //     function inner(){
-    //         let secret = "my123"
-    //         console.log("inner", username);
-    //     }
-    //     function innerTwo(){
-    //         console.log("innerTwo", username);
-    //         console.log(secret);
-    //     }
-    //     inner()
-    //     innerTwo()
+    function outer(){
+        let username = "hitesh"
+        //console.log("OUTER", secret);
+        function inner(){
+            let secret = "my123"
+            console.log("inner", username);
+        }
+        function innerTwo(){
+            console.log("innerTwo", username);
+            //console.log(secret);
+        }
+        inner()
+        innerTwo()
 
-    // }
-    // outer()
+    }
+    outer()
     // console.log("TOO OUTER", username);
 
     // This is closure when a function is returned from inside a function. Now since makeFunc is executed the name variable must also not be present. 
     // But when you return a function then whole lexical scope of functiona nd its parent function is returned.
-    // function makeFunc() {
-    //     const name = "Mozilla";
-    //     function displayName() {
-    //         console.log(name);
-    //     }
-    //     return displayName;
-    // }
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
+    }
 
-    // const myFunc = makeFunc();
-    // myFunc();
+    const myFunc = makeFunc();
+    myFunc();
 
     </script>
     <script>

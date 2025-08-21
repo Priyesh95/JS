@@ -32,9 +32,10 @@
     // altkey, ctrlkey, shiftkey, keyCode
 
 
-    // Event propogation and Event capturing
-    // If false it means event bubbling. 
-    // In event bubbling the for below code owl clicked will be logged first and then clicked inside UL. Since it is considered as bubble which is bottom up approach
+    // Two types how events work 
+    // 1. Event propogation(last parameter in addEventListener is false which is also default) 
+    // In event bubbling/propogation for below code owl clicked will be logged first and then clicked inside UL. Since it is considered as bubble which is bottom up approach
+    // 2. Event capturing (last parameter in addEventListener is true)
     // In event capturing the for below code clicked inside UL will be logged first and then owl clicked. Since it is considered as bubble which is top down approach
 
     // document.getElementById('images').addEventListener('click', function(e){
@@ -43,11 +44,10 @@
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation() // stopPropogation means event will not buuble up and will stop here. Buuble up mentioned as it is false. if it were true then event will not go down
-    // }, false)
+    //     e.stopPropagation() // stopPropogation means event will not buuble up and will stop here. which means "clicked inside ul" will not be printed as we stopped its propogation. 
     
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
+    //     e.preventDefault(); This will not allow to redirect to google.com.
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
