@@ -4,7 +4,7 @@ function setUserName(username){
 }
 
 function createUser(username,email){
-    setUserName.call(this,username);
+    setUserName.call(this,username); // We want this setUserName to set this.username for createUser function. So we use call method and provide 'this' to setUserName function.
     this.email = email;
     return {
         username : this.username,
